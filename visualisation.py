@@ -3,13 +3,6 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.datasets import fetch_mldata
 
-#use all digits
-#mnist = fetch_mldata("MNIST original")
-#X_train, y_train = mnist.data[:70000], mnist.target[:70000]
-
-#X_train, y_train = shuffle(X_train, y_train)
-#X_train, y_train = X_train[:1000], y_train[:1000]  # lets subsample a bit for a first impression
-
 from reader import get_images
 (X_train, y_train), (x_test, y_test) = get_images() 
 
