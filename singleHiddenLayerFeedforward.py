@@ -14,8 +14,6 @@ y_test = Variable(torch.from_numpy(y_test))
 
 scores = model(X_test)
 _, predictions = torch.max(scores.data, 1)
-print(predictions)
-print(y_test.data)
 mean = torch.mean((predictions.byte() == y_test.data).float())
 print(mean)
 

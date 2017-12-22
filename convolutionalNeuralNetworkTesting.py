@@ -17,7 +17,7 @@ X_test = Variable(torch.from_numpy(X_test).float())
 y_test = Variable(torch.from_numpy(y_test))
 
 
-model = torch.load("CNN_lowest_loss_training_83.pt")
+model = torch.load("CNN.pt")
 scores = model(X_test)
 _, predictions = torch.max(scores.data, 1)
 mean = torch.mean((predictions.byte() == y_test.data).float())
