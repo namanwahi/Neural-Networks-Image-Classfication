@@ -13,10 +13,8 @@ fig, plot = plt.subplots()
 fig.set_size_inches(50, 50)
 plt.prism()
 
-zeroToNine = np.arange(2)
-cycle = np.repeat(zeroToNine, 30000)
 
-plot.scatter(X_transformed[:, 0], X_transformed[:, 1], c=cycle)
+plot.scatter(X_transformed[:, 0], X_transformed[:, 1], c=y_train)
 plot.set_xticks(())
 plot.set_yticks(())
 
