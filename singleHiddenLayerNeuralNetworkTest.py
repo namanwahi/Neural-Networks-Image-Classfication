@@ -14,6 +14,14 @@ y_test = Variable(torch.from_numpy(y_test))
 
 scores = model(X_test)
 _, predictions = torch.max(scores.data, 1)
-mean = torch.mean((predictions.byte() == y_test.data).float())
-print(mean)
+
+y_test, predictions = y_test.data.numpy(), predictions.numpy()
+print("Overall Accuracy " + str(np.mean(predictions == y_test)*100) + '%')
+
+class_no = 10
+for i in range(class_no):
+    indices = np.where(i == y_test)
+    print("Accuract of class " + str(i) + ": " + str(np.mean(predictions[indices] == y_test[indices])*100) + '%')
+
+
 

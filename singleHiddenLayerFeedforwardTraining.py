@@ -8,15 +8,15 @@ from torch.utils.data import TensorDataset, DataLoader
 from random import randint, uniform
 import torch.nn as nn
 
-#method returns a model with 
-def train_NN(X_train, y_train, H, eta):
-    X_train = torch.from_numpy(X_train).float()
-    y_train = torch.from_numpy(y_train)
+
+def train_NN(np_X_train, np_y_train, H, eta):
+    X_train = torch.from_numpy(np_X_train).float()
+    y_train = torch.from_numpy(np_y_train)
 
     batch_size = 256
     loader = DataLoader(TensorDataset(X_train, y_train), batch_size = batch_size)
 
-    I = 28**2
+    I = np_X_train.shape[1]
     O = 10
 
     model = torch.nn.Sequential(
@@ -28,20 +28,21 @@ def train_NN(X_train, y_train, H, eta):
     optimizer = torch.optim.Adam(model.parameters(), lr=eta)
 
     n_epochs = 100
-    loop_loss  = 0
+    epoch_loss  = None
     for i in range(n_epochs):
-        for x_b, y_b in loader:
-            x_v, y_v = Variable(x_b), Variable(y_b)
+        for X_batch, y_batch in loader:
+
+            X_batch, y_batch = Variable(X_batch), Variable(y_batch)
         
-            y_pred = model(x_v)
+            y_pred = model(X_batch)
         
-            loss = loss_fn(y_pred, y_v)
+            loss = loss_fn(y_pred, y_batch)
         
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            loop_loss = loss
-        print("epoch " + str(i) + " loss:" + str(loop_loss))
+            epoch_loss = loss
+        print("Loss at last batch of Epoch:" + str(i) + " Average loss:" + str(loop_loss.data[0]))
     return model
 
 def hyperparameter_search(iterations, hidden_l, hidden_u, eta_l, eta_u):
