@@ -1,7 +1,10 @@
 import torch
 import torch.nn as nn
 from torch.nn.functional import max_pool2d, relu
-
+"""
+Class of a convolutional neural network with two convolutional layers and
+two fully connected layers
+"""
 class ConvNet(nn.Module):
     def __init__(self):
         super(ConvNet, self).__init__()

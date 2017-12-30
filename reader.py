@@ -44,6 +44,31 @@ def get_images():
 
 
 def get_imagesf():
+    """Get the fashion-mnist images.
+
+    Returns
+    -------
+    (x_train, x_test) : tuple of float64 arrays
+        Grayscale image data with shape (num_samples, 28, 28)
+    (y_train, y_test) : tuple of float64 arrays
+        Labels (integers in range 0-9) with shape (num_samples,)
+
+    Examples
+    --------
+    >>> from reader import get_imagesf
+    >>> (x_train, y_train), (x_test, y_test) = get_imagesf() 
+
+    Notes
+    -----
+    The data is split into train and test sets as described in the original paper [1].
+
+    References
+    ----------
+    1. Xiao H, Rasul K, Vollgraf R. Fashion-MNIST: a Novel Image Dataset for 
+    Benchmarking Machine Learning Algorithms. CoRR [Internet]. 2017;abs/1708.07747.
+    Available from: http://arxiv.org/abs/1708.07747
+    """
+
     with tarfile.open('data.tar.gz', 'r') as f:
         f.extractall()
 
