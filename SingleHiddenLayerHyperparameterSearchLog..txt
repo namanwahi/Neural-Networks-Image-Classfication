@@ -1,0 +1,28 @@
+**************************************************
+Hidden layer units: 374  Initial learning rate: 0.03538774819032089 Loss: 3.6199793815612793
+Hidden layer units: 595  Initial learning rate: 0.14268582163006036 Loss: 54.416587829589844
+Hidden layer units: 101  Initial learning rate: 0.0030562880698736077 Loss: 1.2590632438659668
+Hidden layer units: 452  Initial learning rate: 0.7283537663375519 Loss: 361.3013610839844
+Hidden layer units: 526  Initial learning rate: 0.010283627594916711 Loss: 2.0643467903137207
+Hidden layer units: 432  Initial learning rate: 0.001828797401301325 Loss: 1.0954526662826538
+Hidden layer units: 463  Initial learning rate: 0.5949378500370854 Loss: 367.7361755371094
+Hidden layer units: 258  Initial learning rate: 0.0036692852925073686 Loss: 1.3284739255905151
+Hidden layer units: 759  Initial learning rate: 0.021790722200904347 Loss: 4.568992614746094
+Hidden layer units: 351  Initial learning rate: 0.3098958845237359 Loss: 50.5041389465332
+Hidden layer units: 699  Initial learning rate: 0.0015510776346285456 Loss: 0.9341930747032166
+Hidden layer units: 485  Initial learning rate: 0.002251422317770052 Loss: 1.2014330625534058
+Hidden layer units: 339  Initial learning rate: 0.5922142338379853 Loss: 108.67781829833984
+Hidden layer units: 172  Initial learning rate: 0.060372524135748507 Loss: 2.1592905521392822
+Hidden layer units: 148  Initial learning rate: 0.04964143033010138 Loss: 2.042207717895508
+Hidden layer units: 668  Initial learning rate: 0.005265206145498711 Loss: 1.6690821647644043
+Hidden layer units: 581  Initial learning rate: 0.0074613759639317765 Loss: 1.9090712070465088
+Hidden layer units: 655  Initial learning rate: 0.11222572107558558 Loss: 33.59316635131836
+Hidden layer units: 599  Initial learning rate: 0.03125432499846671 Loss: 4.1076178550720215
+**************************************************
+Hidden layer units: 685  Initial learning rate: 0.016227747640715367 Loss: 3.0961129665374756
+Hidden layer units: 506  Initial learning rate: 0.049545305672680263 Loss: 8.821755409240723
+Hidden layer units: 261  Initial learning rate: 0.05068619673422109 Loss: 4.03959321975708
+**************************************************
+Hidden layer units: 361  Initial learning rate: 0.0025745825432101532 Loss: 1.2118397951126099
+Hidden layer units: 725  Initial learning rate: 0.004305505695012196 Loss: 1.509057879447937
+Hidden layer units: 110  Initial learning rate: 0.00442655124547384 Loss: 1.325418472290039
