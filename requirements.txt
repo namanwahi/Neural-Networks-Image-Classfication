@@ -1,0 +1,9 @@
+All scripts written in python 3.5.2
+All scripts run/tested in Ubuntu 16.04.3 LTS
+Required python3 libraries:
+-numpy
+-scipy
+-pandas
+-sklearn
+-matplotlib
+-pytorch
