@@ -3,7 +3,7 @@ import numpy as np
 from reader import get_imagesf
 from dataPreprocessing import  preprocess_training_data,  preprocess_test_data
 
-#seed RNG for demonstration purposes
+#seed RNG for demonstration purposes (can be removed)
 np.random.seed(0)
 
 
@@ -40,11 +40,11 @@ for i in range(n_epochs):
     dscores[range(N), y_train] = dscores[range(N), y_train] - 1
     dscores = dscores / N
 
-    #derivative of the loss function with respect to the weights
+    #derivative of the loss function with respect to the weights/biases
     dW = np.dot(X_train.T, dscores)
     db = np.sum(dscores, axis=0, keepdims=True)
 
-    #update the weights
+    #update the weights/biases
     W = W - (eta * dW)
     b = b - (eta * db)
 

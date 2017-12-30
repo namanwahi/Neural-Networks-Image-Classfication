@@ -58,7 +58,7 @@ def train_NN(np_X_train, np_y_train, H, eta):
             loss.backward()
             optimizer.step()
             epoch_loss = loss
-        print("Loss at last batch of Epoch:" + str(i) + " Average loss:" + str(loop_loss.data[0]))
+        print("Loss at last batch of Epoch:" + str(i) + " Average loss:" + str(epoch_loss.data[0]))
     return model
 
 def hyperparameter_search(iterations, hidden_l, hidden_u, eta_l, eta_u):
@@ -75,7 +75,6 @@ def hyperparameter_search(iterations, hidden_l, hidden_u, eta_l, eta_u):
 
     """
 
-    #refactor conversion to float64
     (X_train_full, y_train_full), _  = get_imagesf()
     #preprocess whole training data set
     mean_image = preprocess_training_data(X_train_full)
